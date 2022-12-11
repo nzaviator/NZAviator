@@ -5,12 +5,775 @@
 <head>
   <title>JS Counter</title>
   <!-- <link rel="stylesheet" href="css/style.css" type="text/css"> -->
-  <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 
 <body>
   <div>
     <style>
+      .sub-hd {
+        font-weight: 600;
+        text-decoration: underline;
+        font-size: 26px;
+        text-underline-offset: 7px;
+      }
+
+      .containerCalu {
+        max-width: 1180px;
+        width: 100%;
+        margin: 30px auto;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .caluContainer {
+        border: solid 1px #ccc;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      button.course-accordion {
+        background-color: transparent;
+        color: #000;
+        cursor: pointer;
+        padding: 20px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 22px;
+        font-weight: 600;
+      }
+
+      /*When the button is active or mouse hovers*/
+      button.course-accordion.active {
+        /* background-color: rgba(166, 166, 166, 0.6); */
+        border-bottom: 1px solid #ccc;
+      }
+
+      /*button not active*/
+      button.course-accordion:after {
+        content: '\002B';
+        color: #6ecad7;
+        font-weight: bold;
+        float: right;
+        margin-left: 5px;
+      }
+
+      /* minus button */
+      button.course-accordion.active:after {
+        content: "\2212";
+      }
+
+      div.course-panel {
+        /* padding: 20px; */
+        background-color: transparent;
+        max-height: 0;
+        overflow: hidden;
+        -webkit-transition: max-height 0.2s ease-out;
+        transition: max-height 0.2s ease-out;
+        font-size: 15px;
+        font-weight: 400;
+        color: rgba(0, 0, 0, 0.88);
+        border-bottom: 1px solid #ccc;
+      }
+
+      .insideDIv {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        padding: 20px 0;
+        -ms-flex-flow: wrap;
+        flex-flow: wrap;
+      }
+
+      .insideDIv .caluCol,
+      .insideDIv .caluCol2,
+      .insideDIv .radioDiv {
+        width: 33.3333%;
+        position: relative;
+        padding: 15px 20px;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+
+      .insideDIv .caluCol3 {
+        height: 47px;
+      }
+
+      .insideDIv .caluCol .formControl {
+        border: 1px solid #ccc;
+        padding: 15px;
+        padding-left: 160px;
+        width: 100%;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        border-radius: 3px;
+      }
+
+      .insideDIv .caluCol .formControl:focus {
+        border: 1px solid #ccc;
+        outline: none !important;
+      }
+
+      .insideDIv .caluCol2 .formControl-lg {
+        border: 1px solid #ccc;
+        padding: 15px;
+        padding-left: 250px;
+        width: 100%;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        border-radius: 3px;
+      }
+
+      .insideDIv .caluCol3 {
+        border: 1px solid #ccc;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        border-radius: 3px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+      }
+
+      .insideDIv .caluCol label {
+        position: absolute;
+        left: 30px;
+        top: 16px;
+        bottom: 16px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        min-width: 130px;
+        border-right: 1px solid #ccc;
+        font-weight: bold;
+        font-size: 14px;
+      }
+
+      .insideDIv .caluCol2 label {
+        position: absolute;
+        left: 30px;
+        top: 16px;
+        bottom: 16px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        min-width: 220px;
+        border-right: 1px solid #ccc;
+        font-weight: bold;
+        font-size: 14px;
+        background: #fff;
+        padding-left: 11px !important;
+        left: 21px;
+      }
+
+      .insideDIv .caluCol3 label {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        padding: 15px 20px;
+        font-weight: bold;
+        font-size: 14px;
+        background: #fff;
+      }
+
+      .btn {
+        border: 1px solid #000;
+        text-align: center;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        color: #000;
+        font-size: 18px;
+        text-decoration: none;
+      }
+
+      .dot {
+        height: 20px;
+        width: 20px;
+        text-align: center;
+        vertical-align: middle;
+        border-radius: 50%;
+        display: inline-block;
+        border: 1px solid #000;
+        cursor: pointer;
+      }
+
+      .containerCalu h1 {
+        text-align: center;
+        padding: 20px 0px;
+      }
+
+      div.course-panel-box {
+        font-size: 15px;
+        font-weight: 400;
+        color: rgba(0, 0, 0, 0.88);
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+      }
+
+      .borderBox {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 20px;
+        width: 100%;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        height: 100%;
+      }
+
+      .caluColnew {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        padding: 20px 0px;
+      }
+
+      .caluColnew label {
+        min-width: 300px;
+      }
+
+      .caluColnew .formControl {
+        border: 1px solid #ccc;
+        padding: 15px;
+        width: 100%;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        border-radius: 3px;
+      }
+
+      .caluColnew .formControl:focus {
+        border: 1px solid #ccc;
+        outline: none !important;
+      }
+
+      .rowColDiv {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+      }
+
+      .rowColDiv .course-panel-box {
+        width: 48%;
+      }
+
+      .rowColDiv .course-panel-box-wide {
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+      }
+
+      input:focus,
+      textarea:focus {
+        outline: none;
+      }
+
+      input[type=number]::-webkit-inner-spin-button {
+        opacity: 1;
+      }
+
+      .labelshort {
+        min-width: 200px !important;
+      }
+
+      input[type="number"] {
+        width: 50% !important;
+      }
+
+      .col-form-label {
+        padding-top: calc(0.65rem + 1px);
+        padding-bottom: calc(0.65rem + 1px);
+        margin-bottom: 0;
+        font-size: inherit;
+        line-height: 1.5;
+      }
+
+      .col-xxl,
+      .col-xxl-auto,
+      .col-xxl-12,
+      .col-xxl-11,
+      .col-xxl-10,
+      .col-xxl-9,
+      .col-xxl-8,
+      .col-xxl-7,
+      .col-xxl-6,
+      .col-xxl-5,
+      .col-xxl-4,
+      .col-xxl-3,
+      .col-xxl-2,
+      .col-xxl-1,
+      .col-xl,
+      .col-xl-auto,
+      .col-xl-12,
+      .col-xl-11,
+      .col-xl-10,
+      .col-xl-9,
+      .col-xl-8,
+      .col-xl-7,
+      .col-xl-6,
+      .col-xl-5,
+      .col-xl-4,
+      .col-xl-3,
+      .col-xl-2,
+      .col-xl-1,
+      .col-lg,
+      .col-lg-auto,
+      .col-lg-12,
+      .col-lg-11,
+      .col-lg-10,
+      .col-lg-9,
+      .col-lg-8,
+      .col-lg-7,
+      .col-lg-6,
+      .col-lg-5,
+      .col-lg-4,
+      .col-lg-3,
+      .col-lg-2,
+      .col-lg-1,
+      .col-md,
+      .col-md-auto,
+      .col-md-12,
+      .col-md-11,
+      .col-md-10,
+      .col-md-9,
+      .col-md-8,
+      .col-md-7,
+      .col-md-6,
+      .col-md-5,
+      .col-md-4,
+      .col-md-3,
+      .col-md-2,
+      .col-md-1,
+      .col-sm,
+      .col-sm-auto,
+      .col-sm-12,
+      .col-sm-11,
+      .col-sm-10,
+      .col-sm-9,
+      .col-sm-8,
+      .col-sm-7,
+      .col-sm-6,
+      .col-sm-5,
+      .col-sm-4,
+      .col-sm-3,
+      .col-sm-2,
+      .col-sm-1,
+      .col,
+      .col-auto,
+      .col-12,
+      .col-11,
+      .col-10,
+      .col-9,
+      .col-8,
+      .col-7,
+      .col-6,
+      .col-5,
+      .col-4,
+      .col-3,
+      .col-2,
+      .col-1 {
+        position: relative;
+        width: 100%;
+        padding-right: 12.5px;
+        padding-left: 12.5px;
+      }
+
+      .form-group {
+        margin-bottom: 1.75rem;
+      }
+
+      .row {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        /*  margin-right: -12.5px;
+margin-left: -12.5px; */
+      }
+
+      @media (min-width: 850px) {
+        .col-sm-4 {
+          width: 33.33333333%;
+        }
+
+        .col-md-6 {
+          width: 50%;
+        }
+
+        .radioDiv {
+          margin-right: 50px;
+        }
+      }
+
+      @media (min-width: 992px) {
+        .col-lg-2 {
+          -webkit-box-flex: 0;
+          -ms-flex: 0 0 16.6666666667%;
+          flex: 0 0 16.6666666667%;
+          max-width: 16.6666666667%;
+        }
+
+        .col-lg-6 {
+          -webkit-box-flex: 0;
+          -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+          max-width: 50%;
+        }
+
+        .col-lg-3 {
+          -webkit-box-flex: 0;
+          -ms-flex: 0 0 25%;
+          flex: 0 0 25%;
+          max-width: 25%;
+        }
+      }
+
+      @media (max-width: 1078px) {
+        .insideDIv .caluCol3 label {
+          padding: 15px 0px;
+        }
+      }
+
+      @media (max-width: 1040px) {
+        .insideDIv .caluCol2 label {
+          min-width: 190px;
+        }
+
+        .insideDIv .caluCol2 .formControl-lg {
+          padding-left: calc(202px + 5px);
+        }
+      }
+
+      @media (max-width: 940px) {
+        .insideDIv .caluCol2 label {
+          min-width: 180px;
+        }
+
+        .insideDIv .caluCol2 .formControl-lg {
+          padding-right: 5px;
+          padding-left: calc(190px + 5px);
+        }
+      }
+
+      @media screen and (max-width: 850px) {
+        .insideDIv .caluCol {
+          width: 100%;
+        }
+
+        .rowColDiv,
+        .caluColnew {
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          -webkit-box-align: start;
+          -ms-flex-align: start;
+          align-items: flex-start;
+          padding: 8px 0px;
+        }
+
+        .rowColDiv .course-panel-box {
+          width: 100%;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          margin-bottom: 20px;
+        }
+
+        .caluColnew label {
+          margin-bottom: 5px;
+        }
+
+        .insideDIv .caluCol2 label {
+          min-width: 220px !important;
+        }
+
+        .insideDIv .caluCol2 {
+          width: 100% !important;
+        }
+
+        .insideDIv .caluCol2 .formControl-lg {
+          border: 1px solid #ccc;
+          padding: 15px;
+          padding-left: 250px;
+          width: 100%;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          border-radius: 3px;
+        }
+
+        .insideDIv .radioDiv {
+          width: 100%;
+        }
+
+        .separate {
+          width: 100%;
+          border-top: 2px solid #000;
+          margin: 0 20px;
+        }
+      }
+
+      @media (max-width: 380px) {
+        .radioDiv .caluCol3 label {
+          padding: 15px 0px;
+        }
+      }
+
+      @media (max-width: 850px) {
+        .insideDIvHeading :nth-child(1) {
+          -webkit-box-ordinal-group: 2;
+          -ms-flex-order: 1;
+          order: 1;
+        }
+
+        .insideDIvHeading :nth-child(2) {
+          -webkit-box-ordinal-group: 4;
+          -ms-flex-order: 3;
+          order: 3;
+        }
+
+        .insideDIvHeading :nth-child(3) {
+          -webkit-box-ordinal-group: 3;
+          -ms-flex-order: 2;
+          order: 2;
+        }
+
+        .insideDIvHeading :nth-child(4) {
+          -webkit-box-ordinal-group: 5;
+          -ms-flex-order: 4;
+          order: 4;
+        }
+      }
+
+      @media (max-width: 850px) {
+        .insideDIvFuel :nth-child(1) {
+          -webkit-box-ordinal-group: 2;
+          -ms-flex-order: 1;
+          order: 1;
+        }
+
+        .insideDIvFuel :nth-child(2) {
+          -webkit-box-ordinal-group: 4;
+          -ms-flex-order: 3;
+          order: 3;
+        }
+
+        .insideDIvFuel :nth-child(3) {
+          -webkit-box-ordinal-group: 6;
+          -ms-flex-order: 5;
+          order: 5;
+        }
+
+        .insideDIvFuel :nth-child(4) {
+          -webkit-box-ordinal-group: 3;
+          -ms-flex-order: 2;
+          order: 2;
+        }
+
+        .insideDIvFuel :nth-child(5) {
+          -webkit-box-ordinal-group: 5;
+          -ms-flex-order: 4;
+          order: 4;
+        }
+
+        .insideDIvFuel :nth-child(6) {
+          -webkit-box-ordinal-group: 7;
+          -ms-flex-order: 6;
+          order: 6;
+        }
+      }
+
+      .caluCol50 {
+        width: 50% !important;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+      }
+
+      @media (max-width: 850px) {
+        .caluCol50 {
+          width: 100%;
+        }
+      }
+
+      .caluCol50 .formControl-lg {
+        width: 100% !important;
+        padding: 15px !important;
+      }
+
+      .caluCol50 label {
+        position: static !important;
+        border-right: 0 !important;
+        min-width: 190px !important;
+      }
+
+      @media screen and (max-width: 850px) {
+        .caluCol50 label {
+          min-width: 180px !important;
+        }
+      }
+
+      .insideDIv50 {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+      }
+
+      @media (max-width: 850px) {
+        .insideDIv50 {
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+        }
+
+        .insideDIv50 .caluCol50rn {
+          -webkit-box-ordinal-group: 2;
+          -ms-flex-order: 1;
+          order: 1;
+        }
+
+        .insideDIv50 .caluCol50wd {
+          -webkit-box-ordinal-group: 3;
+          -ms-flex-order: 2;
+          order: 2;
+        }
+
+        .insideDIv50 .caluCol50ws {
+          -webkit-box-ordinal-group: 4;
+          -ms-flex-order: 3;
+          order: 3;
+        }
+
+        .insideDIv50 .caluCol50cw {
+          -webkit-box-ordinal-group: 5;
+          -ms-flex-order: 4;
+          order: 4;
+        }
+
+        .insideDIv50 .caluCol50hw {
+          -webkit-box-ordinal-group: 6;
+          -ms-flex-order: 5;
+          order: 5;
+        }
+
+        .insideDIv50 .caluCol50tw {
+          -webkit-box-ordinal-group: 7;
+          -ms-flex-order: 6;
+          order: 6;
+        }
+      }
+
+      .radioFuel {
+        margin-right: 0;
+      }
+
+      .radioFuel .caluCol3 label {
+        width: 50%;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        gap: 5px;
+      }
+
+      .radioFuel .caluCol3 label:first-child {
+        border-right: 1px solid #ccc;
+      }
+
+      .insideDIvFuel .caluCol2 {
+        width: 33.333% !important;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+      }
+
+      @media screen and (max-width: 850px) {
+        .insideDIvFuel .caluCol2 {
+          width: 100% !important;
+        }
+      }
+
+      .insideDIvFuel .caluCol2 label {
+        border: 1px solid #ccc;
+        position: static !important;
+        border-right: 0 !important;
+        min-width: 0 !important;
+        width: calc(50% - 11px) !important;
+      }
+
+      .insideDIvFuel .caluCol2 .formControl-lg {
+        width: 50% !important;
+        padding: 15px !important;
+        border-bottom-left-radius: 0px;
+        border-top-left-radius: 0px;
+      }
+
+      .noArrows input[type="number"]::-webkit-outer-spin-button,
+      .noArrows input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+      }
+
+      .noArrows input[type='number'],
+      .noArrows input[type="number"]:hover,
+      .noArrows input[type="number"]:focus {
+        -webkit-appearance: none;
+        appearance: none;
+        -moz-appearance: textfield;
+      }
+
+      @media (max-width: 850px) {
+        .specificRangeFunction :nth-child(1) {
+          order: 1;
+        }
+
+        .specificRangeFunction :nth-child(2) {
+          order: 2;
+        }
+
+        .specificRangeFunction :nth-child(3) {
+          order: 3;
+        }
+
+        .specificRangeFunction :nth-child(4) {
+          order: 4;
+        }
+
+        .specificRangeFunction :nth-child(5) {
+          order: 5;
+        }
+      }
     </style>
     <div class="containerCalu" onload="incrementCount(10)">
       <h2 class="sub-hd">Unit Conversion</h2>
@@ -105,20 +868,7 @@
 
           </div>
         </div>
-        <!-- <button class="course-accordion">Weight / Mass 3</button>
-        <div class="course-panel">
-          <div class="insideDIv">
-            text
-          </div>
-        </div>
-        <button class="course-accordion">Weight / Mass 4</button>
-        <div class="course-panel">
-          <div class="insideDIv">
-            text
-          </div>
-        </div> -->
       </div>
-
       <div class="rowColDiv">
         <div class="course-panel-box">
           <h2 class="sub-hd"><br />Pressure Altitude Calculator</h2>
@@ -165,11 +915,7 @@
         </div>
 
       </div>
-
-
-
-
-      <h2 class="sub-hd">1:60 Rule Calculators</h2>
+      <h2 class="sub-hd"><br>1:60 Rule Calculators</h2>
       <div class="caluContainer" id="id_main_container2">
         <button class="course-accordion">Track Error (TE)</button>
         <div class="course-panel">
@@ -309,7 +1055,7 @@
         </div>
         <button class="course-accordion">New Heading Required</button>
         <div class="course-panel">
-          <div class="insideDIv insideDIvChack">
+          <div class="insideDIv insideDIvHeading">
             <div class="caluCol2">
               <label> Original Heading (1 to 360)</label>
               <input onkeyup="newHeadingFunction(event,'original_heading');" onblur="isright(this);"
@@ -331,11 +1077,180 @@
             </div>
           </div>
         </div>
-
       </div>
 
+      <h2 class="sub-hd"><br> Wind Components Calculator</h2>
+      <div class="caluContainer" id="id_main_container2">
+        <div class="insideDIv insideDIv50">
+
+          <div class="caluCol2 caluCol50 caluCol50rn">
+            <label>Runway Number (1 to 36)</label>
+            <input onblur="isrightRunwayNumber(this);" min="1" max="36" id="wc_rn" type="number" class="formControl-lg"
+              onchange="windComponentsFunction(event,'wc_rn')" onkeyup="windComponentsFunction(event,'wc_rn')">
+          </div>
+          <div class="caluCol2 caluCol50 caluCol50cw">
+            <label style="color: green;">Cross Wind (knot)</label>
+            <input id="wc_cw" type="text" class="formControl-lg" readonly style="background: #d2d2d2;">
+          </div>
+          <div class="caluCol2 caluCol50 caluCol50wd">
+            <label>Wind Direction (1 to 360)</label>
+            <input onblur="isrightWindDirection(this);" min="001" max="360" id="wc_wd" type="number"
+              class="formControl-lg" onchange="windComponentsFunction(event,'wc_wd')"
+              onkeyup="windComponentsFunction(event,'wc_wd')">
+          </div>
+          <div class="caluCol2 caluCol50 caluCol50hw">
+            <label style="color: green;">Head Wind (knot)</label>
+            <input id="wc_hw" type="text" class="formControl-lg" readonly style="background: #d2d2d2;">
+          </div>
+          <div class="caluCol2 caluCol50 caluCol50ws">
+            <label>Wind Speed (knot)</label>
+            <input onblur="isrightWindSpeed(this);" min="1" max="100" id="wc_ws" type="number" class="formControl-lg"
+              onkeyup="windComponentsFunction(event,'wc_ws')" onchange="windComponentsFunction(event,'wc_ws')">
+          </div>
+          <div class="caluCol2 caluCol50 caluCol50tw">
+            <label style="color: green;">Tail Wind (knot)</label>
+            <input id="wc_tw" type="text" class="formControl-lg" readonly style="background: #d2d2d2;">
+          </div>
+        </div>
+      </div>
+      <h2 class="sub-hd"><br> Fuel Calculators</h2>
+      <div class="caluContainer" id="id_main_container">
+        <button class="course-accordion">Fuel Converter</button>
+        <div class="course-panel">
+          <div class="insideDIv insideDIvChack insideDIvFuel">
+            <div class="caluCol2">
+              <label>Amount (Litres)</label>
+              <input onkeyup="fuelConverterFunction(event,'fuel_converter');" onblur="isrightFuelConverter(this);"
+                id="fuel_converter" type="text" class="formControl-lg">
+            </div>
+
+            <div class="caluCol2">
+              <label style="color: green;">US Gallons</label>
+              <input id="us_gallons" type="text" class="formControl-lg" readonly style="background: #d2d2d2;">
+            </div>
+            <div class="caluCol2">
+              <label style="color: green;">Kilograms</label>
+              <input id="kilograms" type="text" class="formControl-lg" readonly style="background: #d2d2d2;">
+            </div>
+            <div class="radioDiv radioFuel">
+              <div class="caluCol3">
+                <label>AVGAS<input type="radio" name="fuel" checked value="avgas"></label>
+                <label>JET A-1<input type="radio" name="fuel" value="jet"> </label>
+              </div>
+            </div>
+            <div class="caluCol2">
+              <label style="color: green;">Pounds (lbs)</label>
+              <input id="pounds" type="text" class="formControl-lg" readonly style="background: #d2d2d2;">
+            </div>
+
+
+            <div class="caluCol2">
+              <label style="color: green;">Imperial Gallons</label>
+              <input id="imperial_gallons" type="text" class="formControl-lg" readonly style="background: #d2d2d2;">
+            </div>
+          </div>
+        </div>
+        <button class="course-accordion">Amount Burned</button>
+        <div class="course-panel">
+          <div class="insideDIv insideDIvChack insideDIvFuel">
+            <div class="caluCol2">
+              <label>Burn Rate (l/hr)</label>
+              <input onkeyup="amountBurnedFunction(event,'burn_rate');" id="burn_rate" type="number"
+                class="formControl-lg">
+            </div>
+            <div class="caluCol2">
+              <label>Duration (Minutes)</label>
+              <input onkeyup="amountBurnedFunction(event,'duration');" min="1" step="1"
+                onkeypress='return event.charCode >= 48 && event.charCode <= 57' id="duration" type="number"
+                class="formControl-lg">
+            </div>
+
+            <div class="caluCol2">
+              <label style="color: green;">Fuel Burned (Litres)</label>
+              <input id="fuelBurned" type="text" class="formControl-lg" readonly style="background: #d2d2d2;">
+            </div>
+
+          </div>
+        </div>
+        <button class="course-accordion">Consumption</button>
+        <div class="course-panel noArrows">
+          <div class="insideDIv insideDIvChack insideDIvFuel">
+            <div class="caluCol2">
+              <label>Fuel Burned (Litres)</label>
+              <input onkeyup="consumptionFunction(event,'fuel_burned');" id="fuel_burned" type="number"
+                class="formControl-lg">
+            </div>
+            <div class="caluCol2">
+              <label>Duration (Minutes)</label>
+              <input onkeyup="consumptionFunction(event,'duration_minutes');" min="1" step="1"
+                onkeypress='return event.charCode >= 48 && event.charCode <= 57 ' id="duration_minutes" type="number"
+                class="formControl-lg">
+            </div>
+
+            <div class="caluCol2">
+              <label style="color: green;">Burn Rate (l/hr)</label>
+              <input id="burn_rate_l/hr" type="text" class="formControl-lg" readonly style="background: #d2d2d2;">
+            </div>
+
+          </div>
+        </div>
+        <button class="course-accordion">Duration</button>
+        <div class="course-panel noArrows">
+          <div class="insideDIv insideDIvChack insideDIvFuel">
+            <div class="caluCol2">
+              <label>Fuel Burned (Litres)</label>
+              <input onkeyup="durationFunction(event,'fuel_burned3');" id="fuel_burned3" type="number"
+                class="formControl-lg">
+            </div>
+            <div class="caluCol2">
+              <label>Burn Rate (l/hr)</label>
+              <input onkeyup="durationFunction(event,'burn_rate3');" id="burn_rate3" type="number"
+                class="formControl-lg">
+            </div>
+
+            <div class="caluCol2">
+              <label style="color: green;">Duration (Minutes)</label>
+              <input id="duration_minutes3" type="text" class="formControl-lg" readonly style="background: #d2d2d2;">
+            </div>
+
+          </div>
+        </div>
+        <button class="course-accordion">Specific Range</button>
+        <div class="course-panel noArrows">
+          <div class="insideDIv insideDIvChack insideDIvFuel specificRangeFunction">
+            <div class="caluCol2">
+              <label>Fuel On Board (Litres)</label>
+              <input onkeyup="specificRangeFunction(event,'fuelOnBoardSpecificRange');" id="fuelOnBoardSpecificRange"
+                type="number" class="formControl-lg">
+            </div>
+            <div class="caluCol2">
+              <label>Burn Rate (l/hr)</label>
+              <input onkeyup="specificRangeFunction(event,'burnRateSpecificRange');" id="burnRateSpecificRange"
+                type="number" class="formControl-lg">
+            </div>
+            <div class="caluCol2">
+              <label>Ground Speed (kts)</label>
+              <input onkeyup="specificRangeFunction(event,'groundSpeedSpecificRange');" min="1" step="1"
+                onkeypress='return event.charCode >= 48 && event.charCode <= 57 ' id="groundSpeedSpecificRange"
+                type="number" class="formControl-lg">
+            </div>
+
+            <div class="caluCol2">
+              <label style="color: green;">Endurance (Minutes)</label>
+              <input id="enduranceSpecificRange" type="text" class="formControl-lg" readonly
+                style="background: #d2d2d2;">
+            </div>
+            <div class="caluCol2">
+              <label style="color: green;">Range (nm)</label>
+              <input id="rangeSpecificRange" type="text" class="formControl-lg" readonly style="background: #d2d2d2;">
+            </div>
+
+          </div>
+        </div>
+      </div>
       <!-- <script src="script.js"></script> -->
       <script>
+
 
         function densityAltitudeFunction(e, type) {
           let value = e.target.value;
@@ -971,9 +1886,228 @@
           }
         }
 
+        function isrightRunwayNumber(obj) {
+          var value = +obj.value.replace(/\D/g, '') || 0;
+          if (value > 36) value = 36;
+          if (value < 1) value = '';
+          obj.value = value
+        }
 
+        function isrightWindDirection(obj) {
+          var value = +obj.value.replace(/\D/g, '') || 0;
+          if (value > 360) value = 360;
+          if ((value < 100) && (value >= 10)) {
+            value = '0' + value;
+          }
+          if (value < 10) {
+            value = '00' + value;
+          }
+          if (value < 1) value = '';
+          obj.value = value
+        }
+
+        function isrightWindSpeed(obj) {
+          var value = +obj.value.replace(/\D/g, '') || 0;
+          if (value > 100) value = 100;
+          if (value < 1) value = '';
+          obj.value = value
+        }
+
+
+        function windComponentsFunction(e, type) {
+          let value = e.target.value;
+          if (type == 'wc_rn' || type == 'wc_wd' || type == 'wc_ws') {
+            var rwy = Number(document.getElementById("wc_rn").value);
+            var windir = Number(document.getElementById("wc_wd").value);
+            var windspeed = Number(document.getElementById("wc_ws").value);
+            var runwayDirection = rwy * 10;
+            var angle = runwayDirection - windir;
+            var pi = (Math.PI / 180);
+            var sinFactor = Math.sin(angle * pi);
+            var cross = windspeed * sinFactor;
+            var cosFactor = Math.cos(angle * pi);
+            var head = windspeed * cosFactor;
+            if ((!(head)) || (!(cross)) || (!(rwy)) || (!(windir)) || (!(windspeed))) {
+              document.getElementById("wc_hw").value = '';
+              document.getElementById("wc_tw").value = '';
+              document.getElementById("wc_cw").value = '';
+            } else {
+              if (head >= 0) {
+                document.getElementById("wc_hw").value = Math.abs(head * (-1)).toFixed(1);
+                document.getElementById("wc_tw").value = '';
+              } else {
+                document.getElementById("wc_tw").value = Math.abs(head * (-1)).toFixed(1);
+                document.getElementById("wc_hw").value = '';
+              }
+              document.getElementById("wc_cw").value = Math.abs(cross * (-1)).toFixed(1)
+            }
+          }
+        }
+
+        function isrightFuelConverter(obj) {
+          var value = +obj.value.replace(/\D/g, '') || 0;
+          if (value > 400000) value = 400000;
+          if (value < 1) value = '';
+          obj.value = value
+        }
+
+        var Fuel = 'avgas';
+
+        document.getElementsByName('fuel').forEach(function (chk) {
+          chk.addEventListener('click', function () {
+            if (this.checked) {
+              /* console.log(this.value); */
+              Fuel = this.value;
+            }
+            fuelConverterFunction(event, 'fuel_converter')
+          });
+        });
+
+        function fuelConverterFunction(e, type) {
+
+          let value = e.target.value;
+
+
+          if (type == 'fuel_converter') {
+
+            var FC = document.getElementById("fuel_converter").value;
+
+            var us_gallons;
+            var pounds;
+            var kilograms;
+            var imperial_gallons;
+
+
+            if (Fuel == 'avgas') {
+              us_gallons = FC / 3.78;
+              pounds = FC * 1.58;
+              kilograms = FC * 0.72;
+              imperial_gallons = FC / 4.54;
+
+            }
+            else if (Fuel == 'jet') {
+              us_gallons = FC / 3.78;
+              pounds = FC * 1.76;
+              kilograms = FC * 0.80;
+              imperial_gallons = FC / 4.54;
+            }
+            if (!(us_gallons)) {
+              document.getElementById("us_gallons").value = '';
+              document.getElementById("pounds").value = '';
+              document.getElementById("kilograms").value = '';
+              document.getElementById("imperial_gallons").value = '';
+            } else {
+              document.getElementById("us_gallons").value = us_gallons.toFixed(2);
+              document.getElementById("pounds").value = pounds.toFixed(2);
+              document.getElementById("kilograms").value = kilograms.toFixed(2);
+              document.getElementById("imperial_gallons").value = imperial_gallons.toFixed(2);
+            }
+          }
+        }
+
+        function amountBurnedFunction(e, type) {
+
+          let value = e.target.value;
+
+          if (type == 'duration' || type == 'burn_rate') {
+
+            var BR = parseFloat(document.getElementById("burn_rate").value);
+
+            var DR = parseFloat(document.getElementById("duration").value);
+
+            var FB = (BR / 60).toFixed(2) * DR
+
+            if (isNaN(FB)) {
+
+              document.getElementById("fuelBurned").value = '';
+
+            } else {
+
+              document.getElementById("fuelBurned").value = FB.toFixed(1)
+            }
+          }
+        }
+
+        function consumptionFunction(e, type) {
+
+          let value = e.target.value;
+
+          if (type == 'duration_minutes' || type == 'fuel_burned') {
+
+            var FB = parseFloat(document.getElementById("fuel_burned").value);
+
+            var DR = parseFloat(document.getElementById("duration_minutes").value);
+
+            var BR = (FB * 60).toFixed(2) / DR
+
+            if (isNaN(BR)) {
+
+              document.getElementById("burn_rate_l/hr").value = '';
+
+            } else {
+
+              document.getElementById("burn_rate_l/hr").value = BR.toFixed(2)
+            }
+          }
+        }
+
+        function durationFunction(e, type) {
+
+          let value = e.target.value;
+
+          if (type == 'burn_rate3' || type == 'fuel_burned3') {
+
+            var FB = parseFloat(document.getElementById("fuel_burned3").value);
+
+            var BR = parseFloat(document.getElementById("burn_rate3").value);
+
+            var DM = (FB / BR) * 60
+
+            if (isNaN(DM)) {
+
+              document.getElementById("duration_minutes3").value = '';
+
+            } else {
+
+              document.getElementById("duration_minutes3").value = DM.toFixed(0)
+            }
+          }
+        }
+
+        function specificRangeFunction(e, type) {
+
+          let value = e.target.value;
+
+          if (type == 'fuelOnBoardSpecificRange' || type == 'burnRateSpecificRange' || type == 'groundSpeedSpecificRange') {
+
+            var FOBSR = parseFloat(document.getElementById("fuelOnBoardSpecificRange").value);
+
+            var BRSR = parseFloat(document.getElementById("burnRateSpecificRange").value);
+
+            var GSSR = parseFloat(document.getElementById("groundSpeedSpecificRange").value);
+
+
+            var ESR = (FOBSR / BRSR) * 60
+
+            var RSR = (GSSR * ESR) / 60
+
+
+            if (isNaN(ESR) || isNaN(RSR)) {
+
+              document.getElementById("enduranceSpecificRange").value = '';
+              document.getElementById("rangeSpecificRange").value = '';
+
+
+            } else {
+
+              document.getElementById("enduranceSpecificRange").value = ESR.toFixed(0)
+              document.getElementById("rangeSpecificRange").value = RSR.toFixed(2)
+
+            }
+          }
+        }
       </script>
     </div>
 </body>
 
-</html>
+</htm
