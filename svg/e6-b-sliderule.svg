@@ -477,25 +477,25 @@
       </g>
       <g id="Arrows">
         <path d="M430.62,114.77l2,.54-5.43,3,1.64-6,1,1.82L438,103.8l.78.62Z" transform="translate(-32.9)"
-          fill="#231f20"></path>
+          fill="red"></path>
         <path d="M488.64,157.84l-10.91,7.49,1.75,1.12-6.06,1.24,3.34-5.21.41,2L488.08,157Z" transform="translate(-32.9)"
-          fill="#231f20"></path>
+          fill="red"></path>
         <path d="M330.18,55.54,327.9,68.61l2-.47-3.35,5.21-1.39-6,1.74,1.12,2.28-13.07Z" transform="translate(-32.9)"
-          fill="#231f20"></path>
+          fill="red"></path>
         <path d="M264.86,65.44l-1.76,5.93-3-5.4,2,.59L260.6,53.39c.33,0,.66-.08,1-.11l1.46,13.17Z"
-          transform="translate(-32.9)" fill="#231f20"></path>
+          transform="translate(-32.9)" fill="red"></path>
         <path d="M135.1,122.22l2-.62-8.58-10,.76-.65,8.58,10,.92-1.86,1.89,5.9Z" transform="translate(-32.9)"
-          fill="#231f20"></path>
+          fill="red"></path>
         <path d="M202,502.82l-.05,6.19-1.43-1.5-5.35,12.39c-.31-.12-.62-.25-.92-.39l5.35-12.39-2.07,0Z"
-          transform="translate(-32.9)" fill="#231f20"></path>
+          transform="translate(-32.9)" fill="red"></path>
         <path d="M77,388.31v-2.08l-12.37,5.21c-.14-.3-.27-.61-.39-.92l12.37-5.21-1.49-1.44h6.2Z"
-          transform="translate(-32.9)" fill="#231f20"></path>
+          transform="translate(-32.9)" fill="red"></path>
         <path
           d="M412.62,86.34l-6.75,11.34,2.05.28-5,3.67.84-6.13L405,97.17l6.75-11.35C412.05,86,412.34,86.15,412.62,86.34Z"
-          transform="translate(-32.9)" fill="#231f20"></path>
+          transform="translate(-32.9)" fill="red"></path>
         <path id="Arc"
           d="M134.78,130.69l-2.09-5.82-.86,1.88-13-14.1-.68-.74-.74.68a249.08,249.08,0,0,0-56.11,76.12c-.15.3-.29.6-.43.9l.9.43,17.38,8.23-1.55,1.38,6.19.27-4.13-4.62-.08,2.07-17.38-8.24a248.1,248.1,0,0,1,55.89-75.8l13,14.1-1.95.7Z"
-          transform="translate(-32.9)" fill="#231f20"></path>
+          transform="translate(-32.9)" fill="red"></path>
       </g>
       <g id="Outer_Numbers" data-name="Outer Numbers">
         <path id="_10" data-name="10"
@@ -3157,21 +3157,21 @@
       </g>
       <g id="Arrows-2" data-name="Arrows">
         <path d="M484.86,259.54l.42-2-6.67,1.33c-.06-.33-.13-.66-.2-1l6.68-1.32-1.17-1.71,6.07,1.25Z"
-          transform="translate(-32.9)" fill="#231f20"></path>
+          transform="translate(-32.9)" fill="red"></path>
         <path d="M222.53,478.27l-2.36,6.22,2.08-.08L218,488.89l-.23-6.19,1.5,1.44,2.35-6.23Z"
-          transform="translate(-32.9)" fill="#231f20"></path>
+          transform="translate(-32.9)" fill="red"></path>
         <path d="M156.24,152.75l-.73.68-4.73-5.14-.86,1.89-2.09-5.83,5.64,2.56-2,.7Z" transform="translate(-32.9)"
-          fill="#231f20"></path>
+          fill="red"></path>
         <path d="M110.2,372.31,104,374.92l1.49,1.45h-6.2l4.33-4.43V374l6.21-2.61Z" transform="translate(-32.9)"
-          fill="#231f20"></path>
+          fill="red"></path>
         <path
           d="M140.39,421.62,135.17,426l1.84.95-5.92,1.8,2.84-5.51.6,2,5.22-4.35C140,421.11,140.17,421.37,140.39,421.62Z"
-          transform="translate(-32.9)" fill="#231f20"></path>
+          transform="translate(-32.9)" fill="red"></path>
         <path d="M324.67,98.35l-1.74-1.13L321.74,104l-1-.17,1.18-6.81-2,.47,3.36-5.21Z" transform="translate(-32.9)"
-          fill="#231f20"></path>
+          fill="red"></path>
         <path
           d="M393.07,118.16l-.76,5.48-.06.45,0,.2-.17-.23-.28,0,.17-.12-.95-1.28-3.56,6-.5.85-1.61,2.7c.88.52,1.76,1.06,2.63,1.6l-.53.85q-1.29-.81-2.61-1.59c-.28-.17-.56-.34-.85-.5l2.12-3.57.51-.85,3.55-6-2.06-.28Z"
-          transform="translate(-32.9)" fill="#231f20"></path>
+          transform="translate(-32.9)" fill="red"></path>
       </g>
       <g id="Density_Altitude" data-name="Density Altitude">
         <path
@@ -4394,13 +4394,13 @@
         <g>
           <line x1="382.22" y1="133.55" x2="370.26" y2="149" fill="#fff"></line>
           <g>
-            <line x1="379.96" y1="136.47" x2="370.26" y2="149" fill="none" stroke="#231f20" stroke-miterlimit="10">
+            <line x1="379.96" y1="136.47" x2="370.26" y2="149" fill="none" stroke="red" stroke-miterlimit="10">
             </line>
-            <polygon points="377.07 136.44 379.49 137.08 380.7 139.26 382.22 133.55 377.07 136.44" fill="#231f20">
+            <polygon points="377.07 136.44 379.49 137.08 380.7 139.26 382.22 133.55 377.07 136.44" fill="red">
             </polygon>
           </g>
         </g>
-        <line x1="383.23" y1="159.37" x2="370.59" y2="148.56" fill="#fff" stroke="#231f20" stroke-miterlimit="10">
+        <line x1="383.23" y1="159.37" x2="370.59" y2="148.56" fill="#fff" stroke="red" stroke-miterlimit="10">
         </line>
       </g>
     </g>
