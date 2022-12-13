@@ -82,24 +82,7 @@ a:focus {
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
-}
-
-@media (min-width: 768px) {
-  .container {
-    width: 750px;
-  }
-}
-
-@media (min-width: 992px) {
-  .container {
-    width: 970px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-    width: 1170px;
-  }
+  max-width: 640px;
 }
 
 .container-fluid {
@@ -107,6 +90,8 @@ a:focus {
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -346,10 +331,13 @@ a:focus {
   background-color: #fff;
   border-radius: 6px;
   min-height: 640px;
+  max-width: 640px;
   overflow: hidden;
   position: relative;
   z-index: 1000;
   border: #000 solid 2px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .sliderule #outer {
@@ -365,7 +353,15 @@ a:focus {
   left: -500px;
   right: -500px;
   z-index: 0;
-  
+  -webkit-transform: none;
+          transform: none;
+}
+
+@media (max-width: 425px) {
+  #pan-layer {
+    -webkit-transform: matrix(0.8, 0, 0, 0.8, 0, 0);
+            transform: matrix(0.8, 0, 0, 0.8, 0, 0);
+  }
 }
 
 #wrap {
@@ -384,7 +380,7 @@ a:focus {
 .navbar {
   border: none;
   border-radius: 6px;
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 .navbar-nav {
@@ -404,10 +400,6 @@ a:focus {
   .buttons > li > a {
     line-height: 43px;
   }
-}
-
-@media (min-width: 768px) {
-
 }
 
 .buttons > li {

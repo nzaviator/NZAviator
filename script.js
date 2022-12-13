@@ -31,7 +31,7 @@ function loadSVG(fragment) {
     (margin = getLeftMargin()),
     (panAdjust = getPanLayerPositioning()),
     (minScale = 1),
-    (maxScale = 4),
+    (maxScale = 1.3),
     (moveAmount = 25),
     ($zoomInBtn = $controls.find(".zoom-in")),
     ($zoomOutBtn = $controls.find(".zoom-out")),
@@ -3330,12 +3330,17 @@ if ("undefined" == typeof jQuery) throw new Error("E6-B Flight Compputer's JavaS
                     "center" === o.css("textAlign") && s.test(b.css(this.elem, "display")) ? (h = 0) : (f = g = 0),
                     (a[4] = Math.min(Math.max(a[4], f - j), -f - j + h)),
                     (a[5] = Math.min(Math.max(a[5], g - k), -g - k + i)))),
+              console.log(a),
+              console.log(a),
+
               "skip" !== c.animate && this.transition(!c.animate),
               c.range && this.$zoomRange.val(n),
-              this.setTransform("matrix(" + a.join(",") + ")"),
+              /* right */((a[4] <= 214) && (a[4] >= -214)) && ((a[5] >= -150) && ((a[5] <= 150)))
+                ? this.setTransform("matrix(" + a.join(",") + ")")
+                : null,
               c.silent || this._trigger("change", a),
               a
-            );
+            )
           }
         },
         isPanning: function () {
