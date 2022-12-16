@@ -1,3 +1,4 @@
+var windowInnerWidth = window.innerWidth;
 function loadSVG(fragment) {
   switch ((z.append(fragment), (s = z.select("#flight-computer")), scope)) {
     case "wind":
@@ -3330,14 +3331,18 @@ if ("undefined" == typeof jQuery) throw new Error("E6-B Flight Compputer's JavaS
                     "center" === o.css("textAlign") && s.test(b.css(this.elem, "display")) ? (h = 0) : (f = g = 0),
                     (a[4] = Math.min(Math.max(a[4], f - j), -f - j + h)),
                     (a[5] = Math.min(Math.max(a[5], g - k), -g - k + i)))),
-              console.log(a),
-              console.log(a),
+              console.log(a[5]),
+              console.log(a[4]),
+
+
 
               "skip" !== c.animate && this.transition(!c.animate),
               c.range && this.$zoomRange.val(n),
-              /* right */((a[4] <= 214) && (a[4] >= -214)) && ((a[5] >= -150) && ((a[5] <= 150)))
+              (window.innerWidth >= 670) && ((a[4] = 0) && (a[5] = 0))
                 ? this.setTransform("matrix(" + a.join(",") + ")")
-                : null,
+                : (window.innerWidth < 670) && ((a[4] <= 214) && (a[4] >= -214)) && ((a[5] >= -150) && ((a[5] <= 150)))
+                  ? this.setTransform("matrix(" + a.join(",") + ")")
+                  : null,
               c.silent || this._trigger("change", a),
               a
             )
