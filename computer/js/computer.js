@@ -3331,11 +3331,6 @@ if ("undefined" == typeof jQuery) throw new Error("E6-B Flight Compputer's JavaS
                     "center" === o.css("textAlign") && s.test(b.css(this.elem, "display")) ? (h = 0) : (f = g = 0),
                     (a[4] = Math.min(Math.max(a[4], f - j), -f - j + h)),
                     (a[5] = Math.min(Math.max(a[5], g - k), -g - k + i)))),
-              console.log(a[5]),
-              console.log(a[4]),
-
-
-
               "skip" !== c.animate && this.transition(!c.animate),
               c.range && this.$zoomRange.val(n),
               (window.innerWidth >= 670) && ((a[4] = 0) && (a[5] = 0))
