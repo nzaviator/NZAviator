@@ -51,6 +51,10 @@ function loadSVG(fragment) {
     webkitRedraw();
   resetApp();
 }
+
+function isLargeScreen() {
+  return window.matchMedia("(min-width: 560px)").matches
+}
 function dirControl() {
   var className = this.className,
     x = 0,
@@ -3233,7 +3237,7 @@ if ("undefined" == typeof jQuery) throw new Error("E6-B Flight Compputer's JavaS
       }),
       (g.rmatrix = v),
       (g.events = b.pointertouch),
-      (g.defaults = { eventNamespace: ".panzoom", transition: !0, cursor: "move", disablePan: !1, disableZoom: !1, increment: 0.3, minScale: 0.4, maxScale: 5, rangeStep: 0.05, duration: 200, easing: "ease-in-out", contain: !1 }),
+      (g.defaults = { eventNamespace: ".panzoom", transition: !0, cursor: "move", disablePan: isLargeScreen(), disableZoom: !1, increment: 0.3, minScale: 0.4, maxScale: 5, rangeStep: 0.05, duration: 200, easing: "ease-in-out", contain: !1 }),
       (g.prototype = {
         constructor: g,
         instance: function () {
@@ -3333,11 +3337,9 @@ if ("undefined" == typeof jQuery) throw new Error("E6-B Flight Compputer's JavaS
                     (a[5] = Math.min(Math.max(a[5], g - k), -g - k + i)))),
               "skip" !== c.animate && this.transition(!c.animate),
               c.range && this.$zoomRange.val(n),
-              (window.innerWidth >= 670) && ((a[4] = 0) && (a[5] = 0))
+              ((a[4] <= 214) && (a[4] >= -214)) && ((a[5] >= -150) && ((a[5] <= 150)))
                 ? this.setTransform("matrix(" + a.join(",") + ")")
-                : (window.innerWidth < 670) && ((a[4] <= 214) && (a[4] >= -214)) && ((a[5] >= -150) && ((a[5] <= 150)))
-                  ? this.setTransform("matrix(" + a.join(",") + ")")
-                  : null,
+                : null,
               c.silent || this._trigger("change", a),
               a
             )
