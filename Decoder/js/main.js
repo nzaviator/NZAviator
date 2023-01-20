@@ -4,7 +4,8 @@ const lists = {
   'ACFD': 'JJKSHJHJJJJKJSBJ',
   '////': 'Weather is bad',
   '/////////': 'Cloud not reported due faulty sensor',
-  'METAR AUTO': 'Automatic aerodrome routine meteorological report'
+  'METAR AUTO': 'Automatic aerodrome routine meteorological report',
+  'WRITE THE ABBREVIATION HERE IN ALL CAPS': 'Here is an explanation of what it means',
 };
 
 let textareaRead = document.querySelector('.js-textarea-read');
