@@ -196,6 +196,13 @@ const lists = {
 'ACC': 'Area control centre or area control',
 'ACCID': 'Notification of an aircraft accident',
 'ACFT': 'Aircraft',
+'ACK': 'Acknowledge',
+'ACL': 'Altimeter check location',
+'ACN': 'Aircraft classification number',
+'ACNZ': 'Airways Corporation of New Zealand Limited',
+'ACPT': 'Accept or accepted',
+'ACT': 'Active or activated or activity',
+'AD': 'Airworthiness Directive',
   'WRITE THE ABBREVIATION HERE IN ALL CAPS': 'Here is an explanation of what it means',
 };
 
