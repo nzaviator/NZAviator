@@ -4,8 +4,9 @@ const lists = {
 '//': 'Weather not detected due sensor temporarily inoperative',
 '///': 'Cloud is detected (unable to determine TCU/CB)',
 '////': 'Visibility not reported due faulty sensor',
-  '/////////': 'Cloud not reported due faulty sensor',
-  'METAR AUTO': 'Automatic aerodrome routine meteorological report',
+'/////////': 'Cloud not reported due faulty sensor',  
+'/////////': 'Cloud not reported due faulty sensor',
+  
   'WRITE THE ABBREVIATION HERE IN ALL CAPS': 'Here is an explanation of what it means',
 };
 
