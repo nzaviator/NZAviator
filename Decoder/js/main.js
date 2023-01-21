@@ -5,6 +5,8 @@ const lists = {
 '///': 'Cloud is detected (unable to determine TCU/CB)',
 '////': 'Visibility not reported due faulty sensor',
 '/////////': 'Cloud not reported due faulty sensor',
+'-': 'Light',
+  
   'WRITE THE ABBREVIATION HERE IN ALL CAPS': 'Here is an explanation of what it means',
 };
 
