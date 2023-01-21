@@ -1,8 +1,7 @@
 // Abbreviation all capital letters must be entered here
 // AcFD will not work 
 const lists = {
-  'ACFD': 'JJKSHJHJJJJKJSBJ',
-  '////': 'Weather is bad',
+  '//': 'Weather not detected due Weather not detected due sensor temporarily inoperative',
   '/////////': 'Cloud not reported due faulty sensor',
   'METAR AUTO': 'Automatic aerodrome routine meteorological report',
   'WRITE THE ABBREVIATION HERE IN ALL CAPS': 'Here is an explanation of what it means',
