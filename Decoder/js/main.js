@@ -182,6 +182,7 @@ const lists = {
 'WS': 'Windshear',
 'WX': 'Weather',
 'Z': 'Coordinated Universal Time',
+'A': 'Amber',
   'WRITE THE ABBREVIATION HERE IN ALL CAPS': 'Here is an explanation of what it means',
 };
 
