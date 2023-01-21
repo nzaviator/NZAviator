@@ -24,6 +24,10 @@ const lists = {
 'AS': 'Altostratus',
 'AT': 'At',
 'ATIS': 'Automatic terminal information service',
+'ATS': 'Air traffic services',
+'AWIB': 'Aerodrome and weather information broadcast',
+'AWS': 'Automatic weather station (produces METAR AUTO)',
+'BASE': 'Cloud base',
   'WRITE THE ABBREVIATION HERE IN ALL CAPS': 'Here is an explanation of what it means',
 };
 
