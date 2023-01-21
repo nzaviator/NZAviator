@@ -1,10 +1,10 @@
 // Abbreviation all capital letters must be entered here
 // AcFD will not work 
 const lists = {
-'//': 'Weather not detected due sensor temporarily inoperative',
-'///': 'Cloud is detected (unable to determine TCU/CB)',
-'////': 'Visibility not reported due faulty sensor',
-'/////////': 'Cloud not reported due faulty sensor',
+'//': 'Weather not detected due sensor temporarily inoperative - (used in METAR AUTO only)',
+'///': 'Cloud is detected (unable to determine TCU/CB) - (used in METAR AUTO only)',
+'////': 'Visibility not reported due faulty sensor - (used in METAR AUTO only)',
+'/////////': 'Cloud not reported due faulty sensor - (used in METAR AUTO only)',
 '-': 'Light',
 '+': 'Heavy',
 '9999': 'Visibility 10KM or more',
@@ -102,7 +102,7 @@ const lists = {
 'MT': 'Mountain',
 'MTW': 'Mountain waves',
 'NC': 'No change',
-'NCD': 'No cloud detected below 10,000 ft',
+'NCD': 'No cloud detected below 10,000 ft - (used in METAR AUTO only)',
 'NM': 'Nautical miles',
 'NOSIG': 'No significant change',
 'NOTAM': 'Notice to airmen',
