@@ -228,6 +228,14 @@ const lists = {
 'AFT': 'After ... (time or place)',
 'AFTN': 'Aeronautical fixed telecommunications network',
 'AGA': 'Aerodromes, air routes and ground aids',
+'AGN': 'Again',
+'AGNIS': 'Azimuth guidance for nose-in stands',
+'AIC': '	Aeronautical information circular',
+'AIDC': 'Air traffic services inter-facility data communication',
+'AIP': 'Aeronautical information publication',
+'AIPNZ': 'Aeronautical information publication of New Zealand',
+'AIRAC': 'Aeronautical information regulation and control',
+'AIRMET': 'Information concerning enroute weather phenomena which may affect the safety of low-level aircraft operations',
   'WRITE THE ABBREVIATION HERE IN ALL CAPS': 'Here is an explanation of what it means',
 };
 
