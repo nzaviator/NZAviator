@@ -188,6 +188,9 @@ const lists = {
 'AAA': '(or AAB, AAC ... etc in sequence) Amended meteorological message',
 'AAD': 'Assigned altitude deviation',
 'AAL': 'Above aerodrome level',
+'ABI': 'Advance boundary information',
+'ABM': 'Abeam',
+'ABN': 'Aerodrome beacon',
   'WRITE THE ABBREVIATION HERE IN ALL CAPS': 'Here is an explanation of what it means',
 };
 
