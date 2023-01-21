@@ -157,6 +157,31 @@ const lists = {
 'TC': 'Tropical cyclone',
 'TCU': 'Towering cumulus',
 'TEMPO': 'Temporarily',
+'TL': 'Till',
+'TREND': 'Trend forecast',
+'TS': 'Thunderstorm',
+'TURB': 'Turbulence',
+'UP': 'Unidentified precipitation',
+'UTC': 'Coordinated Universal Time',
+'V': 'Variations from mean wind direction',
+'VA': 'Volcanic ash',
+'VAA': 'Volcanic Ash Advisory',
+'VAAC': 'Volcanic Ash Advisory Centre',
+'VAG': 'Volcanic Ash Graphic',
+'VAL': 'In valleys', 
+'VC': 'Vicinity of the aerodrome',
+'VCY': 'Vicinity',
+'VFR': 'Visual flight rules',
+'VIS': 'Visibility',
+'VMC': 'Visual meteorological conditions',
+'VRB': 'Variable',
+'VV': 'Vertical visibility',
+'WI': 'Within',
+'WKN': 'Weakening',
+'WDSPR': 'Widespread',
+'WS': 'Windshear',
+'WX': 'Weather,
+'Z': 'Coordinated Universal Time',
   'WRITE THE ABBREVIATION HERE IN ALL CAPS': 'Here is an explanation of what it means',
 };
 
@@ -176,7 +201,7 @@ buttonDecode.onclick = function () {
   }
 }
 function testFunction() {
-  textareaWrite.innerHTML = 'No result available for this code';
+  textareaWrite.innerHTML = 'No result available for this code, please try again.';
   textareaWrite.classList.add('red');
 }
 buttonClear.onclick = function () {
