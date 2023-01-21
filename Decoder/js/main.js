@@ -114,7 +114,7 @@ const lists = {
 'NZZO': 'Auckland Oceanic FIR',
 'OBS': 'Observed',
 'OBSC': 'Obscured',
-'OCNL': 'Occasional'.
+'OCNL': 'Occasional',
 'OPMET': 'Operational meteorological information',
 'OVC': 'Overcast (8 oktas)',
 'PIREP': 'Pilot report (AIREP)',
