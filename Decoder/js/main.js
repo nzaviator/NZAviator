@@ -217,6 +217,17 @@ const lists = {
 'ADS-C': 'Automatic Dependent Surveillance - Contract',
 'ADSU': 'Automatic dependent surveillance unit',
 'ADVS': 'Advisory service',
+'ADZ': 'Advise',
+'AES': 'Aircraft earth station',
+'AFFF': 'Aqueous film forming foam',
+'AFIL': 'Flight plan filed in the air',
+'AFIS': 'Aerodrome flight information service',
+'AFM': 'Yes or affirm or affirmative or that is correct',
+'AFRU': '	Aerodrome frequency response unit',
+'AFS': 'Aeronautical fixed service',
+'AFT': 'After ... (time or place)',
+'AFTN': 'Aeronautical fixed telecommunications network',
+'AGA': 'Aerodromes, air routes and ground aids',
   'WRITE THE ABBREVIATION HERE IN ALL CAPS': 'Here is an explanation of what it means',
 };
 
