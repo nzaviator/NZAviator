@@ -191,6 +191,11 @@ const lists = {
 'ABI': 'Advance boundary information',
 'ABM': 'Abeam',
 'ABN': 'Aerodrome beacon',
+'ACARS': 'Aircraft communication addressing and reporting system (pronounced "AY-CARS")',
+'ACAS': 'Airborne collision avoidance system (pronounced "AY-CASS")',
+'ACC': 'Area control centre or area control',
+'ACCID': 'Notification of an aircraft accident',
+'ACFT': 'Aircraft',
   'WRITE THE ABBREVIATION HERE IN ALL CAPS': 'Here is an explanation of what it means',
 };
 
