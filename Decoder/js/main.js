@@ -180,7 +180,7 @@ const lists = {
 'WKN': 'Weakening',
 'WDSPR': 'Widespread',
 'WS': 'Windshear',
-'WX': 'Weather,
+'WX': 'Weather',
 'Z': 'Coordinated Universal Time',
   'WRITE THE ABBREVIATION HERE IN ALL CAPS': 'Here is an explanation of what it means',
 };
