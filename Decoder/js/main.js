@@ -119,7 +119,7 @@ const lists = {
 'OVC': 'Overcast (8 oktas)',
 'PIREP': 'Pilot report (AIREP)',
 'PL': 'Ice pellets',
-'PO': 'Dust/sand whirls,
+'PO': 'Dust/sand whirls',
 'PR': 'Partial',
 'PROB': 'Probability',
 'PS': 'Plus',
