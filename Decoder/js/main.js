@@ -183,6 +183,11 @@ const lists = {
 'WX': 'Weather',
 'Z': 'Coordinated Universal Time',
 'A': 'Amber',
+'A/A': 'Air-to-air',
+'A/G': 'Air to ground',
+'AAA': '(or AAB, AAC ... etc in sequence) Amended meteorological message',
+'AAD': 'Assigned altitude deviation',
+'AAL': 'Above aerodrome level',
   'WRITE THE ABBREVIATION HERE IN ALL CAPS': 'Here is an explanation of what it means',
 };
 
