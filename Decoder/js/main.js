@@ -236,6 +236,17 @@ const lists = {
 'AIPNZ': 'Aeronautical information publication of New Zealand',
 'AIRAC': 'Aeronautical information regulation and control',
 'AIRMET': 'Information concerning enroute weather phenomena which may affect the safety of low-level aircraft operations',
+'AIS': 'Aeronautical information services',
+'ALA': 'Alighting area',
+'ALERFA': 'Alert phase',
+'ALRS': 'Alerting service',
+'ALS': 'Approach lighting system',
+'ALT': 'Altitude',
+'ALTN': 'Alternate (aerodrome)',
+'AMA': 'Area minimum altitude',
+'AMD': 'Amend',
+'AMDT': 'Amendment (AIP Amendment)',
+'AMS': 'Aeronautical mobile service',
   'WRITE THE ABBREVIATION HERE IN ALL CAPS': 'Here is an explanation of what it means',
 };
 
