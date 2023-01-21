@@ -247,6 +247,12 @@ const lists = {
 'AMD': 'Amend',
 'AMDT': 'Amendment (AIP Amendment)',
 'AMS': 'Aeronautical mobile service',
+'AMSS': 'Aeronautical mobile satellite service',
+'ANC': 'Aeronautical chart 1:500 000 (followed by name/title)',
+'ANS': 'Answer',
+'AOC': 'Aerodrome obstacle chart (followed by type and name/title)',
+'AP': 'Airport',
+'APAPI': 'Abbreviated precision approach path indicator (pronounced "AY-PAPI")',
   'WRITE THE ABBREVIATION HERE IN ALL CAPS': 'Here is an explanation of what it means',
 };
 
