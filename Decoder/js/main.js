@@ -401,7 +401,7 @@ const lists = {
 'DISP': 'Displaced',
 'DIST': 'Distance',
 'DIV': 'Divert or Diverting or Diversion',
-'DLA': 'Delay or Delayed'
+'DLA': 'Delay or Delayed',
 'DLIC': 'Data link initiation capability',
 'DLV': 'Delivery',
 'DLY': 'Daily',
