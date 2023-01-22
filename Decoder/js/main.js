@@ -422,7 +422,6 @@ const lists = {
 'DUR': 'Duration',
 'DVOR': 'Doppler VOR',
 'DW': 'Dual wheels',
-'d': 'Day', 
 'E': 'East or Eastern longitude',
 'EAT': 'Expected approach time',
 'EB': 'Eastbound',
