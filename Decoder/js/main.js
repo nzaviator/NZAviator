@@ -66,7 +66,7 @@ const lists = {
 'FIR': 'Flight information region',
 'FISB': 'Flight information service broadcast',
 'FL': 'Flight level',
-'FM': 'From',
+'FM': 'From'
 'FRQ': 'Frequent',
 'FU': 'Smoke',
 'FZ': 'Freezing',
