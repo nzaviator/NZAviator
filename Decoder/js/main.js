@@ -314,6 +314,17 @@ const lists = {
 'BRNAV': 'Basic area navigation (pronounced "BEE-AR-NAV")',
 'BS': 'Commercial broadcasting station',
 'BTL': 'Between layers',
+'C': 'Degrees Celsius (Centigrade)',
+'CAA': 'NZ Civil Aviation Authority',
+'CAM': 'Collaborative Arrival Manager',
+'CAR': 'NZ Civil Aviation Rules',
+'CC': 'Cirrocumulus',
+'CCA': '(or CCB, CCC ... etc in sequence) Corrected meteorological message',
+'CD': 'Candela(s)',
+'CF': 'Course Fix (used with GNSS approaches - often equivalent to IF)',
+'CFM': 'Confirm or I confirm',
+'CFZ': 'Common Frequency Zone',
+'CGL': 'Circling guidance light(s)',
   'WRITE THE ABBREVIATION HERE IN ALL CAPS': 'Here is an explanation of what it means',
 };
 
