@@ -385,7 +385,7 @@ const lists = {
 'DCMSD': 'Decommissioned',
 'DCPC': 'Direct controller-pilot communications',
 'DCS': 'Double channel simplex',
-'DCT': 'Direct (in relation to flight plan clearances and type of approach)'
+'DCT': 'Direct (in relation to flight plan clearances and type of approach)',
 'DEC': 'December',
 'DEG': 'Degrees',
 'DEP': 'Depart or Departure',
