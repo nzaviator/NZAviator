@@ -503,7 +503,7 @@ const lists = {
 'FZDZ': 'Freezing drizzle', 
 'FZFG': 'Freezing fog', 
 'FZRA': 'Freezing rain', 
-'ft': 'Feet (dimensional unit)', 
+'FT': 'Feet (dimensional unit)', 
   'WRITE THE ABBREVIATION HERE IN ALL CAPS': 'Here is an explanation of what it means',
 };
 
