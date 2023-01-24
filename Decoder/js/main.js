@@ -552,7 +552,7 @@ buttonDecode.onclick = function () {
   }
 }
 function testFunction() {
-  textareaWrite.innerHTML = 'No result available for this code, please try again.';
+  textareaWrite.innerHTML = 'No result available for this code, Please double check your spelling or try a different code.'; 
   textareaWrite.classList.add('red');
 }
 buttonClear.onclick = function () {
