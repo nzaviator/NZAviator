@@ -531,8 +531,8 @@ const lists = {
 'GUND': 'Geoid undulation', 
 'GP': 'Group', 
 'GR': 'Grass', 
-'GR(f)': 'Firm grass', 
-'GR(s)': 'Soft grass', 
+'GR(F)': 'Firm grass', 
+'GR(S)': 'Soft grass', 
   'WRITE THE ABBREVIATION HERE IN ALL CAPS': 'Here is an explanation of what it means',
 };
 
