@@ -459,6 +459,9 @@ const lists = {
 'EXER': 'Exercises or Exercising or to Exercise',
 'EXP': 'Expect or Expected or Expecting',
 'EXTD': 'Extend or Extending',
+'F': 'Fixed',
+'FAC': 'Facilities', 
+
   'WRITE THE ABBREVIATION HERE IN ALL CAPS': 'Here is an explanation of what it means',
 };
 
