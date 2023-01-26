@@ -715,6 +715,10 @@ const lists = {
 'MWO': 'Meteorological watch office', 
 'MX': 'Mixed type of ice formation (white and clear)', 
 'MIN': 'Minute/s',
+'Y': 'Yellow',
+'YCZ': 'Yellow caution zone (runway lighting)',
+'YR': 'Your',
+'Z': 'Coordinated universal time',
   'WRITE THE ABBREVIATION HERE IN ALL CAPS': 'Here is an explanation of what it means',
 };
 
