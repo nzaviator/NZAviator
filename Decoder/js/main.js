@@ -606,6 +606,10 @@ const lists = {
 'ISA': 'International standard atmosphere', 
 'ISB': 'Independent sideband', 
 'ISOL': 'Isolated',
+'JAN': 'January', 
+'JTST': 'Jet stream', 
+'JUL': 'July', 
+'JUN': 'June', 
   'WRITE THE ABBREVIATION HERE IN ALL CAPS': 'Here is an explanation of what it means',
 };
 
