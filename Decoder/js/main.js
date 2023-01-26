@@ -699,7 +699,7 @@ const lists = {
 'MPS': 'Metres per second', 
 'MRA': 'Minimum reception altitudes', 
 'MRG': 'Medium range', 
-'MRP': 'ATS/MET reporting point', \
+'MRP': 'ATS/MET reporting point', 
 'MSA': 'Minimum safe altitude (non-ICAO usage, based on Civil Aviation Rule 91.423)', 
 'MSA25NM': 'Minimum sector altitude (ICAO definition based on 25 NM obstacle clearance)', 
 'MSAW': 'Minimum safe altitude warning', 
