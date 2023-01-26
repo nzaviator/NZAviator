@@ -610,6 +610,11 @@ const lists = {
 'JTST': 'Jet stream', 
 'JUL': 'July', 
 'JUN': 'June', 
+'kHz': 'Kilohertz', 
+'kPa': 'KiloPascal/s', 
+'kW': 'Kilowatt/s', 
+'kg': 'Kilogram/s', 
+'kmh': 'Kilometres per hour', 
   'WRITE THE ABBREVIATION HERE IN ALL CAPS': 'Here is an explanation of what it means',
 };
 
