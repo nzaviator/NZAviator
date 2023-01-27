@@ -749,8 +749,8 @@ const lists = {
 'NZ': 'New Zealand', 
 'NZA...': 'Controlled Airspace (followed by identification)', 
 'NZA': 'Controlled Airspace', 
-'NZB...': 'Mandatory Broadcast' 
-'NZB': 'Mandatory Broadcast'
+'NZB...': 'Mandatory Broadcast Zone (followed by identification)',
+'NZB': 'Mandatory Broadcast Zone',
 'Y': 'Yellow',
 'YCZ': 'Yellow caution zone (runway lighting)',
 'YR': 'Your',
