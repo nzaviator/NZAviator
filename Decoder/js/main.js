@@ -1,6 +1,13 @@
 // Abbreviation all capital letters must be entered here
 // AcFD will not work 
 const lists = {
+'SHRA': 'Moderate Showers of Rain',
+'+SHRA': 'Heavy Showers of Rain',
+'-SHRA': 'Light Showers of Rain',
+'TSRAGS': 'Thunderstorms with Rain and Small Hail',
+'RERA': 'Recent Rain',
+'VCTS': 'Thunderstorms in the Vicinity',
+'FZFG': 'Freezing Fog',
 '//': 'Weather not detected due sensor temporarily inoperative - (used in METAR AUTO only)',
 '///': 'Cloud is detected (unable to determine TCU/CB) - (used in METAR AUTO only)',
 '////': 'Visibility not reported due faulty sensor - (used in METAR AUTO only)',
