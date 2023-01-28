@@ -930,7 +930,7 @@ const lists = {
 'RUT': 'Standard regional route transmitting frequencies',
 'RV': 'Rescue vessel',
 'RVSM': 'Reduced vertical separation minimum',
-'RWY': 'Runway'
+'RWY': 'Runway',
 'QDM': 'Magnetic heading (zero wind)', 
 'QDR': 'Magnetic heading', 
 'QFE': 'Atmospheric pressure at aerodrome level (or at runway threshold)', 
