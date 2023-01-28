@@ -1150,6 +1150,16 @@ const lists = {
 'YCZ': 'Yellow caution zone (runway lighting)',
 'YR': 'Your',
 'Z': 'Coordinated universal time',
+'NZWT': 'WHITIANGA',
+'NZAA': 'AUCKLAND',
+'NZAR': 'ARDMORE',
+'NZTH': 'THAMES',
+'NZME': 'MERCER',
+'NZPU': 'PUKEKOHE',
+'NZTG': 'TAURANGA',
+'NZTE': 'TE KOWHAI',
+'NZHN': 'HAMILTON',
+'NZRO': 'ROTORUA',
   'WRITE THE ABBREVIATION HERE IN ALL CAPS': 'Here is an explanation of what it means',
 };
 
