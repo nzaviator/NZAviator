@@ -148,7 +148,7 @@ const lists = {
 'SPECI': 'Aerodrome special meteorological report',
 'SQ': 'Squall',
 'SQL': 'Squall line',
-'SS': 'Sandstorm (MET) | Sunset (Flight Planning)',
+'SS': 'Sandstorm (MET) or Sunset in Flight Planning',
 'ST': 'Stratus | or St = Stabilised',
 'STNR': 'Stationary',
 'T': 'Temperature, in degrees Celsius',
