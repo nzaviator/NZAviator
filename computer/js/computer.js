@@ -5355,3 +5355,13 @@ if ("undefined" == typeof jQuery)
       }
     });
   });
+
+// Відправка повідомлення при натисканні кнопки Slide Rule Side
+document.getElementById("flip-slide").addEventListener("click", function () {
+  parent.postMessage("slideButtonClicked", "*");
+});
+
+// Відправка повідомлення при натисканні кнопки Wind Side
+document.getElementById("flip-wind").addEventListener("click", function () {
+  parent.postMessage("windButtonClicked", "*");
+});
