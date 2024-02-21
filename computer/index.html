@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Flight computer</title>
 
-    <link href="css/computer.css" rel="stylesheet" />
+    <!-- <link href="css/computer.css" rel="stylesheet" /> -->
 
     <script type="text/javascript">
       /* Enable our transformations on SVG elements in IE11 */
@@ -83,6 +83,7 @@
       line-height: 1.42857143;
       color: #fff;
       background-color: #fff;
+      width: 100%;
     }
 
     a {
@@ -117,6 +118,14 @@
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
+    }
+    @media (max-width: 768px) {
+      .container,
+      .container-fluid {
+        padding-right: 0px;
+        width: 100%;
+        padding-left: 0px;
+      }
     }
 
     .row {
